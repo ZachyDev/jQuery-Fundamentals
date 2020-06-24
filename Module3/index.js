@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     // changing the styles using att property in jquery
 
-    alert($('div[title="andela Google"]').html())
+    alert($('div[title$="Google"]').html())
     $('div.about,div.services').attr(
         {
             title: 'About and Services section'

@@ -28,11 +28,20 @@ $(document).ready(function(){
     .css('position','relative')
     .css('margin-left','200px');
 
-    // appending,prepending,wrap and remove
+    // appending,prepending
     // get the moreInfo div
     var moreInfo = $('div.more-info');
     // append  a div
     moreInfo.append('<span style="background-color:gold;">Appended child1</span>');
     // prepend
     moreInfo.prepend('<span style="background-color:dodgerblue;">Prepended child1</span>');
+
+    // wrap method
+    // get the about-alc divs
+    var aboutAlc = $('.about-alc');
+    aboutAlc.wrap('<div class="about parentWrapper"></div>')
+    $('div.parentWrapper').each(function(){
+        alert($(this).html());
+    })
+
 })

@@ -41,7 +41,10 @@ $(document).ready(function(){
     var aboutAlc = $('.about-alc');
     aboutAlc.wrap('<div class="about parentWrapper"></div>')
     $('div.parentWrapper').each(function(){
-        alert($(this).html());
+        // alert($(this).html());
     })
+
+    // Remove
+    $('div.parentWrapper').remove();
 
 })

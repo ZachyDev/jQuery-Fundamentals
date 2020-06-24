@@ -13,6 +13,8 @@ $(document).ready(function(){
     // output.html(html);
 
     // changing the styles using att property in jquery
+
+    alert($('div[title="andela Google"]').html())
     $('div.about,div.services').attr(
         {
             title: 'About and Services section'

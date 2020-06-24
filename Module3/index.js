@@ -29,10 +29,10 @@ $(document).ready(function(){
     .css('margin-left','200px');
 
     // appending,prepending,wrap and remove
-    // get the services div
-    var services = $('div.services');
+    // get the moreInfo div
+    var moreInfo = $('div.more-info');
     // append  a div
-    services.append('<span style="background-color:"gold">Appended child1</span>');7
+    moreInfo.append('<span style="background-color:gold;">Appended child1</span>');
     // prepend
-    services.prepend('<span style="background-color:"gold">Prepended child1</span>');
+    moreInfo.prepend('<span style="background-color:dodgerblue;">Prepended child1</span>');
 })

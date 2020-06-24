@@ -47,4 +47,10 @@ $(document).ready(function(){
     // Remove
     $('div.parentWrapper').remove();
 
+    // modifying styles
+    // addClass demo
+    var contact = $('div.contact');
+    contact.addClass('contac');
+
+
 })

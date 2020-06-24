@@ -1,0 +1,11 @@
+body{
+    margin:0;
+    padding: 0;
+    /* background-color: #222; */
+}
+.contact{
+    width: 50%;
+    height: 20vh;
+    background-color: dodgerblue;
+    margin-left: 200px;
+}

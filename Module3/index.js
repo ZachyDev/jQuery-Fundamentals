@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     // changing the styles using att property in jquery
 
-    alert($('div[title^="andela"]').html())
+    // alert($('div[title^="andela"]').html())
     $('div.about,div.services').attr(
         {
             title: 'About and Services section'
@@ -27,4 +27,12 @@ $(document).ready(function(){
     .css('font-family','sans-serif')
     .css('position','relative')
     .css('margin-left','200px');
+
+    // appending,prepending,wrap and remove
+    // get the services div
+    var services = $('div.services');
+    // append  a div
+    services.append('<span style="background-color:"gold">Appended child1</span>');7
+    // prepend
+    services.prepend('<span style="background-color:"gold">Prepended child1</span>');
 })

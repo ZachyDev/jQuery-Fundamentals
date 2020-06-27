@@ -49,8 +49,29 @@ $(document).ready(function(){
 
     // modifying styles
     // addClass demo
-    var contact = $('div.contact');
-    contact.addClass('contac');
+    
+   var contact = $('div.contact');
+   contact.addClass('contacts');
 
+    contact.dblclick(() => {
+        contact.toggleClass('contacts');
+    })
+
+
+   // call handleEventMouseOver function
+   handleEventMouseOver();
+ 
 
 })
+
+    //handle events function
+    function handleEventMouseOver() {
+        let button = $('.subscribe button')
+        button.mouseover(() => {
+        button.css('background-color','dodgerblue')
+            .css('width','120px')
+            .css('outline','none')
+            .css('border-radius','15px')
+    })
+    }
+    

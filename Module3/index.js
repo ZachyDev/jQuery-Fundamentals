@@ -89,7 +89,10 @@ handleSelectField();
    function handleSelectField() {
     //    get the select field
     let selectedField = $('div #selectedValue');
+    let selectValue = $('div.select-value');
     selectedField.change(function(){
-        alert($(this).val())
+        // alert($(this).val())
+        selectValue.html($(this).val() + ' ' + 'Selected')
+        selectValue.addClass('selectField');
     })
    }

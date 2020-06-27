@@ -109,4 +109,9 @@ $(document).ready(function(){
         .mouseleave(function(){
             $(this).addClass('header')
         })
+        .mouseup(function(e) {
+            // alert($(e.target.attr('id')))
+            $(this).text('X: ' +  e.pageX + 'Y: ' + e.pageY);
+        })
    }
+   

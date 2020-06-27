@@ -66,6 +66,12 @@ $(document).ready(function(){
     
     // handle header
     handleHeader()
+
+    // animate scroll
+    animateScroll();
+
+    // animate about
+    scrollAbout()
  
 
 })
@@ -113,5 +119,20 @@ $(document).ready(function(){
             // alert($(e.target.attr('id')))
             $(this).text('X: ' +  e.pageX + 'Y: ' + e.pageY);
         })
+   }
+
+   function animateScroll() {
+        //get the body
+        let body = $('.services');
+        body.scroll(function() {
+            alert('hey')
+        })
+   
+   }
+   function scrollAbout(){
+       let about = $('.about');
+       about.on('click',function(){
+           alert('hey')
+       })
    }
    

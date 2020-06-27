@@ -60,6 +60,9 @@ $(document).ready(function(){
 
    // call handleEventMouseOver function
   handleEvtMouseOver();
+
+//   call handleSelectField function
+handleSelectField();
  
 
 })
@@ -79,5 +82,14 @@ $(document).ready(function(){
            .css('margin-left','100px')
            .css('margin-top','50px')
            .css('outline','none')
+    })
+   }
+
+    // change demo
+   function handleSelectField() {
+    //    get the select field
+    let selectedField = $('div #selectedValue');
+    selectedField.change(function(){
+        alert($(this).val())
     })
    }

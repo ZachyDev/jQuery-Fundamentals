@@ -59,19 +59,25 @@ $(document).ready(function(){
 
 
    // call handleEventMouseOver function
-   handleEventMouseOver();
+  handleEvtMouseOver();
  
 
 })
 
     //handle events function
-    function handleEventMouseOver() {
-        let button = $('.subscribe button')
-        button.mouseover(() => {
-        button.css('background-color','dodgerblue')
-            .css('width','120px')
-            .css('outline','none')
-            .css('border-radius','15px')
-    })
-    }
+   function handleEvtMouseOver() {
+    // get button
+    let btn = $('.subscribe button');
     
+    // attach mouse over event to the button
+    btn.mouseover(() => {
+        btn.css('background-color','teal')
+           .css('color','#fff')
+           .css('width','130px')
+           .css('padding','12px')
+           .css('border-radius','15px')
+           .css('margin-left','100px')
+           .css('margin-top','50px')
+           .css('outline','none')
+    })
+   }

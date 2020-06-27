@@ -58,11 +58,14 @@ $(document).ready(function(){
     })
 
 
-   // call handleEventMouseOver function
-  handleEvtMouseOver();
+     // call handleEventMouseOver function
+     handleEvtMouseOver();
 
-//   call handleSelectField function
-handleSelectField();
+    // call handleSelectField function
+    handleSelectField();
+    
+    // handle header
+    handleHeader()
  
 
 })
@@ -95,4 +98,15 @@ handleSelectField();
         selectValue.html($(this).val() + ' ' + 'Selected')
         selectValue.addClass('selectField');
     })
+   }
+
+   function handleHeader() {
+       let header = $('div#header');
+       header.mouseenter(function() {
+           $(this).toggleClass('header');
+           $(this).css('cursor','pointer')
+       })
+        .mouseleave(function(){
+            $(this).addClass('header')
+        })
    }

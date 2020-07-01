@@ -57,6 +57,7 @@ $(document).ready(function(){
         contact.toggleClass('contacts');
     })
 
+    
 
      // call handleEventMouseOver function
      handleEvtMouseOver();
@@ -65,17 +66,28 @@ $(document).ready(function(){
     handleSelectField();
     
     // handle header
-    handleHeader()
+    handleHeader();
 
     // animate scroll
     animateScroll();
 
     // animate about
-    scrollAbout()
+    scrollAbout();
+
+    // select user
+    selectUser();
  
 
 })
 
+
+    // handle select field
+    function handleSelectField(){
+        let value = $('#selectedValue');
+        value.change(function(){
+            alert($(this).val())
+        })
+    }
     //handle events function
    function handleEvtMouseOver() {
     // get button
@@ -95,31 +107,18 @@ $(document).ready(function(){
    }
 
     // change demo
-   function handleSelectField() {
-    //    get the select field
-    let selectedField = $('div #selectedValue');
-    let selectValue = $('div.select-value');
-    selectedField.change(function(){
-        // alert($(this).val())
-        selectValue.html($(this).val() + ' ' + 'Selected')
-        selectValue.addClass('selectField');
-    })
-   }
 
-   function handleHeader() {
-       let header = $('div#header');
-       header.mouseenter(function() {
-           $(this).toggleClass('header');
-           $(this).css('cursor','pointer')
-       })
-        .mouseleave(function(){
-            $(this).addClass('header')
+    function handleHeader(){
+        let header = $('#header');
+        header.on('mouseenter mouseleave mouseup',function(e){
+            $(this).toggleClass('header')
+            $(this).css('cursor','pointer')
+            // chech for the mouse up event
+            if(e.type == 'mouseup') {
+                $(this).text('X: ' + e.pageX + 'Y: ' + e.pageY )
+            }
         })
-        .mouseup(function(e) {
-            // alert($(e.target.attr('id')))
-            $(this).text('X: ' +  e.pageX + 'Y: ' + e.pageY);
-        })
-   }
+    }
 
    function animateScroll() {
         //get the body
@@ -136,3 +135,17 @@ $(document).ready(function(){
        })
    }
    
+
+//    grab the table record
+
+function selectUser() {
+    let btn = $('#addRow')
+    let tbody = $('#users tbody');
+    tbody.on('click','td',function() {
+        alert($(this).html())
+    })
+    // append a row ,on click of a button
+    btn.on('click',function() {
+        tbody.append('<tr><td>Rodgers</td><td>Makori</td></tr>')
+    })
+}

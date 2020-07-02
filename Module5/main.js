@@ -25,7 +25,7 @@ $(document).ready(function(){
 function fetchData() {
     let btn = $('#load');
     btn.click(function() {
-        $.get('../index.html',function(data) {
+        $.post('https://my-json-server.typicode.com/ZachyDev/ZachyAPI/users',function(data) {
             $('div.loaded-data').html(data);
         })
     })

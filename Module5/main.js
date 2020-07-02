@@ -1,20 +1,32 @@
 $(document).ready(function(){
 
     // loadedData
-    loadedData();
+    // loadedData();
+    fetchData();
   
 })
 
-function loadedData() {
+// function loadedData() {
+//     let btn = $('#load');
+//     let dataDiv = $('div.loaded-data');
+//     btn.on('click',function(){
+//         dataDiv.load('https://my-json-server.typicode.com/ZachyDev/ZachyAPI/companies/1',
+//         function(response,status,xhr) {
+//             if (status == 'error') {
+//                 alert('Error: ' + xhr.statusText)
+//             }
+//         }
+//         );
+//     })
+// }
+
+// making get requests
+
+function fetchData() {
     let btn = $('#load');
-    let dataDiv = $('div.loaded-data');
-    btn.on('click',function(){
-        dataDiv.load('../data.js',
-        function(response,status,xhr) {
-            if (status == 'error') {
-                alert('Error: ' + xhr.statusText)
-            }
-        }
-        );
+    btn.click(function() {
+        $.get('../index.html',function(data) {
+            $('div.loaded-data').html(data);
+        })
     })
 }

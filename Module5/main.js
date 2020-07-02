@@ -6,9 +6,9 @@ $(document).ready(function(){
 })
 
 function loadedData() {
-    let loadedData = $('div.loaded-data');
     let btn = $('#load');
-    btn.click(function() {
-        loadedData.load('https://hplussport.com/api/products')
+    let dataDiv = $('div.loaded-data');
+    btn.on('click',function(){
+        dataDiv.load('../index.html .about');
     })
 }
